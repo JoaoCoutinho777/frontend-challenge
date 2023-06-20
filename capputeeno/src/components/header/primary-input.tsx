@@ -4,7 +4,7 @@ import { InputHTMLAttributes } from "react";
 import { SearchIcon } from "../icons/search-icon";
 
 export const PrimaryInput = styled.input`
-    width: 352px;
+    width: 100%;
     background-color: var(--bg-secondary);
     border-radius: 8px;
     border: none;
@@ -13,20 +13,30 @@ export const PrimaryInput = styled.input`
     font-family: inherit;
     font-weight: 400;
     font-size: 14px;
-    line-height: 22px;
+    line-height: 20px;
     color: var(--text-dark);
+
+    @media (min-width: ${props => props.theme.desktopBreakpoint}){
+        font-size: 14px;
+        line-height: 22px;
+    }
 `;
 
 const InputContainer = styled.div`
     position: relative;
-    width: 352px;
+    width: 250px;
     
     svg {
         position: absolute;
         right: 22px;
         top: 50%;
         transform: translateY(-50%);
-    }`;
+    }
+    
+    @media (min-width: ${props => props.theme.desktopBreakpoint}){
+        width: 352px;
+    }
+    `;
 
 interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
     value: string,
