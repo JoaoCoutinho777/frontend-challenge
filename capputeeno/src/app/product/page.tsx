@@ -120,7 +120,7 @@ export default function Product({ searchParams }: { searchParams: { id: string }
     if(cartItems) {
       let cartItemsArray = JSON.parse(cartItems);
 
-      let existingProductIndex = cartItemsArray.findIndex((item: { id: string }) => item.id === searchParams.id);
+      let existingProductIndex = cartItemsArray.findIndex((item: { id: string; }) => item.id === searchParams.id);
 
       if(existingProductIndex != -1) {
         cartItemsArray[existingProductIndex].quantity += 1;
@@ -133,8 +133,8 @@ export default function Product({ searchParams }: { searchParams: { id: string }
       const newCart = [
         {
           ...data,
-          id: searchParams.id,
-          quantity: 1
+          quantity: 1,
+          id: searchParams.id
         }
       ]
       localStorage.setItem('cart-items', JSON.stringify(newCart));
