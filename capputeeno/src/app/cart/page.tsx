@@ -59,7 +59,7 @@ const CartResultContainer = styled.div`
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    justify-content: center;
+    justify-content: flex-start;
     min-width: 352px;
     padding: 16px 24px;
 
