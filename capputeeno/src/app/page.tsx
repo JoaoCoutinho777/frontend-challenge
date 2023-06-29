@@ -2,6 +2,7 @@
 
 import { DefaultPageLayout } from '@/components/default-page-layout'
 import { FilterBar } from '@/components/filter/filter-bar'
+import { Pagination } from '@/components/filter/pagination'
 import { ProductsList } from '@/components/products-list'
 import { QueryClient } from '@tanstack/react-query'
 import styled from 'styled-components'
@@ -13,11 +14,11 @@ const PageWrapper = styled.main`
   `
 
 export default function Home() {
-  const client = new QueryClient();
   return (
     <DefaultPageLayout>
       <PageWrapper>
         <FilterBar />
+        <Pagination/>
         <ProductsList />
       </PageWrapper>
     </DefaultPageLayout>
