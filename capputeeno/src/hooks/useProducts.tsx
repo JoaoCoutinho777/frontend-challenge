@@ -5,6 +5,7 @@ import { useFilter } from "./useFilter";
 import { mountQuery } from "@/utils/graphql-filters";
 import { useDeferredValue } from "react";
 
+
 const API_URL = process.env.NEXT_PUBLIC_API_URL as string;
 
 const fetcher = (query: string): AxiosPromise<ProductsFetchResponse> => {
@@ -13,14 +14,15 @@ const fetcher = (query: string): AxiosPromise<ProductsFetchResponse> => {
 
 
 export function useProducts(){
-    const { type, priority, search } = useFilter()
+    const { type, priority, search, page } = useFilter()
     const searchDeferred  = useDeferredValue(search)
-    const query = mountQuery(type, priority)
+    const query = mountQuery(type, priority, page)
     const { data } = useQuery({
         queryFn: () => fetcher(query),
-        queryKey: ['products', type, priority],
+        queryKey: ['products', type, priority, page],
         staleTime: 1000*60
     })
+
 
     const products =  data?.data?.data?.allProducts
     const filteredProducts = products?.filter(product => product.name.toLowerCase().includes(searchDeferred.toLowerCase()))
