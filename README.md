@@ -30,7 +30,7 @@ git clone https://github.com/JoaoCoutinho777/frontend-challenge.git
 
 2. Go to the project folder
 ```bash
-cd challenge-frontend
+cd frontend-challenge
 cd capputeeno
 ```
 
@@ -50,7 +50,7 @@ npm run dev
 2. Go to the API folder
 
 ```bash
-cd challenge-frontend
+cd frontend-challenge
 cd api
 ```
 
