@@ -9,7 +9,7 @@ import { PriorityTypes } from '@/types/priority-types';
 const FilterConainer = styled.div`
     display: flex;
     align-items: center;
-    position: relative;
+    position: reltive;
 
     button {
         border: none;
@@ -42,8 +42,8 @@ const PriorityFilter = styled.ul`
 
   list-style: none;
 
-  top: 100%;
-  right: 8px;
+  top: 160px;
+  right: 160px;
   
   li {
     color: var(--text-dark);
