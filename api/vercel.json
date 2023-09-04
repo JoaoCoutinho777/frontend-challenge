@@ -1,0 +1,18 @@
+{
+    "version": 2,
+    "builds": [
+      {
+        "src": "db.js",
+        "use": "@vercel/node",
+        "config": {
+          "includeFiles": ["db.js"]
+        }
+      }
+    ],
+    "routes": [
+      {
+        "src": "/(.*)",
+        "dest": "db.js"
+      }
+    ]
+  }
