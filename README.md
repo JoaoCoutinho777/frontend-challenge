@@ -1,10 +1,8 @@
 # Capputeeno
 
-Welcome! This repository contains my solution for [Rocketseat´s](https://www.rocketseat.com.br/ignite) open source [Frontend Challenge](https://github.com/Rocketseat/frontend-challenge).
-
 # 🧠 About
 
-The challenge is to implement an e-commerce for the sale of mugs and t-shirts that should have the following functionalities:
+E-commerce for the sale of mugs and t-shirts with the following functionalities:
 
 - [x] Product catalog with pagination
 - [x] Filter products by category
