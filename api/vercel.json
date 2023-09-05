@@ -2,11 +2,8 @@
   "version": 2,
   "builds": [
     {
-      "src": "package.json",
-      "use": "vercel-sapper",
-      "config": {
-        "includeFiles": ["server.js"]
-      }
+      "src": "server.js",
+      "use": "vercel-sapper"
     }
   ],
   "routes": [
