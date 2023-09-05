@@ -4,10 +4,6 @@
     {
       "src": "server.js",
       "use": "vercel-sapper",
-      "config": {
-         "build": true,
-         "include": ["posts"]
-      }
     }
   ],
   "routes": [
